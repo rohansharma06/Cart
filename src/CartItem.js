@@ -10,12 +10,33 @@ class CartItem extends React.Component{
             qty: 1,
             img: ''
         }
-        
+
         // bind is use to store the this proberty/ we can use arrow function insted of bind
             //this.increaseQuantity = this.increaseQuantity.bind(this)
     }
+
+    //---- function to increase quantity
     increaseQuantity = () => {
-        console.log("This",this);
+        //---- set state (1st way) -use when prev. state is not req
+            // this.setState({
+            //     qty: this.state.qty+1
+            // });
+
+        //--- set state (2nd way) -use when previous state is req
+            this.setState((prevState) => {
+               return { 
+                   qty:prevState.qty+1
+               }
+            });
+    }
+
+    //---- function to decrease quantity
+    decreaseQuantity = () => {
+        this.setState((prevState) => {
+            return {
+                qty: prevState.qty-1
+            }
+        });
     }
     render() {
         const { price, title, qty} = this.state;
@@ -41,6 +62,7 @@ class CartItem extends React.Component{
                             alt="decrease" 
                             className="action-icons" 
                             src="https://image.flaticon.com/icons/svg/659/659892.svg"
+                            onClick = {this.decreaseQuantity}
                         />
 
                         <img 
