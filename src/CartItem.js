@@ -2,18 +2,7 @@ import React from 'react';
 
 class CartItem extends React.Component{
 
-    constructor(){
-        super();  //---- as cartItem is extend from react.comp so we have to call super for parenr class 
-        this.state = {
-            price: 999,
-            title : 'Mobile Phone',
-            qty: 1,
-            img: ''
-        }
-
-        // bind is use to store the this proberty/ we can use arrow function insted of bind
-            //this.increaseQuantity = this.increaseQuantity.bind(this)
-    }
+   
 
     //---- function to increase quantity
     increaseQuantity = () => {
@@ -45,7 +34,7 @@ class CartItem extends React.Component{
         });
     }
     render() {
-        const { price, title, qty} = this.state;
+        const { price, title, qty} = this.props.product;
         return(
             <div className="cart-item">
                 <div className="left-block">
