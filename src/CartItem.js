@@ -3,7 +3,7 @@ import React from 'react';
 class CartItem extends React.Component{
 
     constructor(){
-        super();
+        super();  //---- as cartItem is extend from react.comp so we have to call super for parenr class 
         this.state = {
             price: 999,
             title : 'Mobile Phone',

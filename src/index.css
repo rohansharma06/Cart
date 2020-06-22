@@ -7,6 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ---- styling for CartItem.js ---- */
 .cart-item {
   display: inline-flex;
   margin: 20px 10px;
@@ -28,4 +29,10 @@ body {
 
 .action-icons:hover {
   cursor: pointer;
+}
+
+/* ---- styling for Cart.js ---- */
+.cart{
+  display: flex;
+  flex-direction: column;
 }
