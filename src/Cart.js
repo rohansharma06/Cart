@@ -33,6 +33,39 @@ class Cart extends React.Component{
         // bind is use to store the this proberty/ we can use arrow function insted of bind
             //this.increaseQuantity = this.increaseQuantity.bind(this)
     }
+    handleIncreaseQuantity = (product) => {
+        //console.log('increase:',product);
+        const { products } = this.state;
+        const index = products.indexOf(product);
+
+        products[index].qty += 1;
+         this.setState({
+             products: products
+         })
+    }
+
+    handleDecreaseQuantity = (product) => {
+        //console.log('decrease',product);
+        const { products } = this.state;
+        const index = products.indexOf(product);
+       
+        if( products[index].qty > 0 ){
+            products[index].qty -= 1;
+            this.setState({
+                products: products
+            })
+        }
+    }
+
+    handleDeleteProduct = (id) => {
+        //console.log('delete', id);
+        const { products } = this.state;
+        const items = products.filter((item) => item.id !== id);
+
+        this.setState({
+            products: items
+        })
+    }
 
     render() {
         const { products } = this.state;
@@ -42,11 +75,14 @@ class Cart extends React.Component{
 
                     return (
                         <CartItem 
-                            product={product} 
-                            key={product.id} 
+                            product = {product} 
+                            key = {product.id} 
+                            onIncreaseQuantity = {this.handleIncreaseQuantity}
+                            onDecreaseQuantity = {this.handleDecreaseQuantity}
+                            onDeleteProduct = {this.handleDeleteProduct}
                         /> 
                     )  
-                      
+
                 }) }
                 
                 
