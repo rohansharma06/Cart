@@ -1,3 +1,24 @@
+# Cart
+
+This is a basic structure of a Cart whic we see on Amazon/Flipcart or any other website.
+
+## Functionality
+
+* User can increase the quantity of product.
+* User can decrease the quantity of product.
+* User can delete the product
+* Total quantity of items in the cart are visible in top right corner.
+* Total price of item is visible at bottom.
+* The sorage is persistance as we use Firebase to store dataa.
+
+[!home](image/home.JPG)
+
+
+## Future Planning
+
+* Will also built search input to add item to storage.  
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -12,10 +33,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
