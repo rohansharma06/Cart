@@ -1,6 +1,7 @@
 # Cart
 
-This is a basic structure of a Cart whic we see on Amazon/Flipcart or any other website.
+This project is the structure of a Cart which are usually visible on Amazon/Flipcart or any other website.</br>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Functionality
 
@@ -11,15 +12,12 @@ This is a basic structure of a Cart whic we see on Amazon/Flipcart or any other 
 * Total price of item is visible at bottom.
 * The sorage is persistance as we use Firebase to store dataa.
 
-[!home](image/home.JPG)
+![home](/image/home.JPG)
 
 
 ## Future Planning
 
 * Will also built search input to add item to storage.  
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
